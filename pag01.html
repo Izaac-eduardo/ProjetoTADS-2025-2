@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparador</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="intro">
+            <h1>Comparador de Desempenho: Celular vs PC</h1>
+            <p id="h">Descubra qual computador tem desempenho parecido com seu celular</p>
+        </div>
+    </header>
+    <main>
+        <div id="comofunciona">
+<p>
+    Selecione o processador e a memória RAM do seu celular, e veja uma configuração de PC aproximada com base no desempenho.
+</p>
+
+
+ </div>
+<div class="proc">
+<label for="processador">Processador do seu celular:</label>
+<select id="processador">
+<option value="Snapdragon 870">Snapdragon 870</option>
+<option value="Snapdragon 865">Snapdragon 865</option>
+<option value="Snapdragon 888">Snapdragon 888</option>
+<option value="Snapdragon 8 gen 1">Snapdragon 8 gen 1</option>
+<option value="Snapdragon 8 gen 2">Snapdragon 8 gen 2</option>
+<option value="Snapdragon 7 gen 1">Snapdragon 7 gen 1</option>
+<option value="Snapdragon 732g">Snapdragon 732g</option>
+<option value="Snapdragon 680">Snapdragon 680</option>
+<option value="Dimensity 920">Dimensity 920</option>
+<option value="Dimensity 9000">Dimensity 9000</option>
+<option value="Exynos 900">Exynos 900</option>
+<option value="Exynos 2100">Exynos 2100</option>
+<option value="Helio g85">Helio g85</option>
+<option value="helio g99">helio g99</option>
+<option value="Kirin 9000">Kirin 9000</option>
+</select> <br>
+
+<label for="ram">Memória RAM do celular (em GB)</label>
+<select id="mr">
+<option value="2 GB">2 GB</option>
+<option value="3 GB">3 GB</option>
+<option value="4 GB">4 GB</option>
+<option value="6 GB">6 GB</option>
+<option value="8 GB">8 GB</option>
+<option value="12 GB">12 GB</option>
+<option value="16 GB (ou mais) GB">16 GB (ou mais) GB</option>
+</select>
+<p><input type="button" value="Comparar com PC" onclick="comparar()"></p>
+<section id="resultado"></section>
+</div>
+
+
+
+<footer>
+    <p>&copy; Criado por Izaac Eduardo</p>
+</footer>
+    </main>
+   <script src="scrip.js"></script>
+</body>
+</html>
