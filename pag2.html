@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+</head>
+<body>
+
+    <div>
+        <nav>
+            <div id="div-contato">
+                <a href="https://wa.me/5544999355143">
+                    <img src="https://th.bing.com/th/id/R.08bdb7afd047b71c085f69de6e311c53?rik=eOS5pxxO%2bzkrgQ&pid=ImgRaw&r=0" alt="" class="zap">
+                    ENTRE EM CONTATO
+                </a>
+            </div>
+<br>
+           <br> <div class="">
+                <h3  style="font-size: 5em; color: blueviolet;"  class="sobre">Serviços </h3> 
+            </div>
+
+            <div id="div-serv">
+                <a href="index.html"><p class="header">Home</p></a>
+                <a href="pag2.html"><p class="header">Serviços</p></a>
+                <a href="pag3.html"><p class="header">Galeria</p></a>
+                <a href="pag4.html"><p class="header">Sobre o Leo</p></a>
+            </div>
+        </nav>
+    </div>
+
+    <main>
+        <div class="container mt-5">
+            <!-- Grupo 1: Flash Tattoo -->
+            <div class="row align-items-start mb-5">
+                <!-- Imagens -->
+                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <img src="serv.jpg" alt="serv" class="img-fluid m-2" style="max-width: 45%;">
+                        <img src="serv2.jpg" alt="serv2" class="img-fluid m-2" style="max-width: 45%;">
+                    </div>
+                </div>
+                <!-- Texto -->
+                <div class="col-12 col-md-6">
+                    <h4 style="color: blueviolet;">💥 Flash Tattoo</h4>
+                    <p>R$75 cada uma. A partir de 3 tattoos, você ganha mais uma de graça!</p>
+                    <p>São tatuagens pequenas (até 7 cm), perfeitas pra quem curte se encher de desenhos pequenos.</p>
+                </div>
+            </div>
+
+            <!-- Grupo 2: Tatuagens por Tamanho -->
+            <div class="row align-items-start mb-5">
+                <!-- Imagens -->
+                <div class="col-12 col-md-6 mb-3 mb-md-0">
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <img src="cava.jpg" alt="cava" class="img-fluid m-2" style="max-width: 45%;">
+                        <img src="stych.jpg" alt="stych" class="img-fluid m-2" style="max-width: 45%;">
+                    </div>
+                </div>
+                <!-- Texto -->
+                <div class="col-12 col-md-6">
+                    <h4 style="color: blueviolet;">📏 Tatuagens por Tamanho</h4>
+                    <ul>
+                        <li>Até 10 cm: R$200 a R$500</li>
+                        <li>Cerca de 20 cm: R$600 a R$1000</li>
+                        <li>Acima de 30 cm: pode passar de R$1000</li>
+                    </ul>
+                    <p><strong>Obs.:</strong> O valor final depende da quantidade de detalhes da arte.</p>
+                </div>
+            </div>
+        </div>
+        
+  <form id="formulario">
+    <h2 style="color: white;">Agende sua tatuagem</h2>
+
+    <label>Nome completo:
+      <input type="text" id="nome">
+      <span class="erro" id="erro-nome"></span>
+    </label>
+
+    <label>E-mail:
+      <input type="email" id="email">
+      <span class="erro" id="erro-email"></span>
+    </label>
+
+    <label>Telefone:
+      <input type="text" id="telefone" placeholder="(00) 00000-0000">
+      <span class="erro" id="erro-telefone"></span>
+    </label>
+
+    <label>Idade:
+      <input type="number" id="idade" min="18" max="100">
+      <span class="erro" id="erro-idade"></span>
+    </label>
+
+    <label>Estilo de tatuagem:
+      <select id="estilo">
+        <option value="" class="ideia">Selecione</option>
+        <option value="realismo" class="ideia">Realismo</option>
+        <option value="aquarela" class="ideia">Aquarela</option>
+        <option value="tradicional" class="ideia">Tradicional</option>
+        <option value="blackwork" class="ideia">Blackwork</option>
+      </select>
+      <span class="erro" id="erro-estilo"></span>
+    </label>
+
+    <label>Descreva sua ideia:
+      <textarea id="descricao" rows="4"></textarea>
+      <span class="erro" id="erro-descricao"></span>
+    </label>
+
+    <button type="submit" id="en">Enviar</button>
+  </form>
+    </main>
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(event) {
+      event.preventDefault(); // não envia se houver erro
+
+      let valido = true;
+
+      // Nome
+      const nome = document.getElementById("nome").value.trim();
+      if (nome.length < 3) {
+        valido = false;
+        document.getElementById("erro-nome").innerText = "Nome deve ter pelo menos 3 letras.";
+      } else {
+        document.getElementById("erro-nome").innerText = "";
+      }
+
+      // E-mail
+      const email = document.getElementById("email").value.trim();
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!regexEmail.test(email)) {
+        valido = false;
+        document.getElementById("erro-email").innerText = "E-mail inválido.";
+      } else {
+        document.getElementById("erro-email").innerText = "";
+      }
+
+      // Telefone
+      const telefone = document.getElementById("telefone").value.trim();
+      const regexTelefone = /^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$/;
+      if (!regexTelefone.test(telefone)) {
+        valido = false;
+        document.getElementById("erro-telefone").innerText = "Telefone inválido. Ex: (11) 91234-5678";
+      } else {
+        document.getElementById("erro-telefone").innerText = "";
+      }
+
+      // Idade
+      const idade = parseInt(document.getElementById("idade").value);
+      if (isNaN(idade) || idade < 18 || idade > 100) {
+        valido = false;
+        document.getElementById("erro-idade").innerText = "Informe uma idade entre 18 e 100.";
+      } else {
+        document.getElementById("erro-idade").innerText = "";
+      }
+
+      // Estilo
+      const estilo = document.getElementById("estilo").value;
+      if (estilo === "") {
+        valido = false;
+        document.getElementById("erro-estilo").innerText = "Selecione um estilo.";
+      } else {
+        document.getElementById("erro-estilo").innerText = "";
+      }
+
+      // Descrição
+      const descricao = document.getElementById("descricao").value.trim();
+      if (descricao.length < 10) {
+        valido = false;
+        document.getElementById("erro-descricao").innerText = "Descreva melhor sua ideia (mínimo 10 caracteres).";
+      } else {
+        document.getElementById("erro-descricao").innerText = "";
+      }
+
+      // Se tudo estiver válido
+      if (valido) {
+        alert("Formulário enviado com sucesso! 😊");
+        // Aqui você pode integrar com PHP depois
+      }
+    });
+    </script>
+
+    <!-- WhatsApp fixo -->
+    <div id="fixo">
+        <a href="https://wa.me/5544999355143">
+            <img src="https://logodownload.org/wp-content/uploads/2015/04/Whatsapp-logo-vetor.png" alt="" id="fix">
+        </a>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <a href="https://wa.me/5544999355143" id="footer">
+            <img src="https://th.bing.com/th/id/R.08bdb7afd047b71c085f69de6e311c53?rik=eOS5pxxO%2bzkrgQ&pid=ImgRaw&r=0" alt="" id="img-footer">
+            Tel: 44 999355143
+        </a>
+         // 
+        <a href="https://maps.app.goo.gl/oemxjXUrNpr6vUvx6" target="_blank">
+            Endereço:  Rua Curiango 750, Cohapar
+        </a>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
