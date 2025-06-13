@@ -40,16 +40,16 @@
                         <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="pag2.html">Serviços</a>
+                        <a class="nav-link active" aria-current="page" href="pag2.php">Serviços</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="pag3.html">Galeria</a>
+                        <a class="nav-link active" aria-current="page" href="pag3.php">Galeria</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="pag4.html">Sobre o Leo</a>
+                        <a class="nav-link active" aria-current="page" href="pag4.php">Sobre o Leo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="pag5.html">Agendar</a>
+                        <a class="nav-link active" aria-current="page" href="pag5.php">Agendar</a>
                     </li>
                 </ul>
             </div>
