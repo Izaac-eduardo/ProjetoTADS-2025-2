@@ -4,6 +4,12 @@
   color: rgb(255, 255, 255) !important;
 }
 
+@font-face {
+  font-family: 'TaylorGothic';
+  src: url('./fonts/TaylorGothic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
   
 header {
@@ -150,7 +156,7 @@ h2#galeria {
 }
 h3.sobre {
     
-    font-family: Caudex, serif;
+    font-family: 'TaylorGothic', serif;
     padding-top: 10px;
     padding-bottom: 5px;
     padding-left: 20px;
@@ -166,14 +172,13 @@ h3.sobre {
     display:inline-block;
   
     border-radius: 20px;
+
 }
 button.carousel-control-prev {
     color: #000000;
     
 }
-/*img.d-block {
-    width: 600px ;
-}*/
+
 div.sobre {
     
     display: inline-block;
@@ -237,7 +242,7 @@ div#fixo {
 }
 div#div-contato {
     
-    margin-left: auto;
+    
     margin-right: auto;
     margin-top: 70px;
     background-color: #00ff55;
@@ -280,7 +285,7 @@ img.zap {
 .carousel-inner img {
   width: 100%;
   height: 500px; /* ou outro valor desejado */
-  object-fit: cover; /* ou 'contain' se quiser manter a proporção */
+   /* ou 'contain' se quiser manter a proporção */
 }
 
 /*img.carro {
@@ -331,27 +336,18 @@ h2#galeria {
 }
 h3.sobre {
     
-  font-family: "Bangers", system-ui;
-    
+  font-family: "Cinzel Decorative", serif;
+    font-weight: bolder;
     padding-bottom: 5px;
     padding-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 5px;
     color: #ffffff;
     text-align: center;
     font-size: 2em;
     
 }
-  img.ft {
-    margin-left: 0px;
-    width: 300px;
-    height: 300px;
-    margin-top: 0%;
-    padding: 10px;
-    display:inline-block;
-  
-  
-}
+ 
 button.carousel-control-prev {
     color: #000000;
     
@@ -466,14 +462,13 @@ img#img-footer {
     padding: 5px;
 }
 p.sobre {
-    padding-left: 20px;
-    text-align: center;
+    
     font-family: "Montserrat", sans-serif;
 }
 .conteudo-sobre {
     display: flex;
     align-items: flex-start;
-    
+    justify-content: space-between
    
   }
   button#enviar {
@@ -504,7 +499,7 @@ p.sobre {
     }
   
     .conteudo-sobre p.sobre {
-      padding: 10px 20px;
+      
       font-size: 1em; /* tamanho mais legível no celular */
     }
   }
@@ -527,14 +522,15 @@ p.sobre {
     background-color: #000000af;
   }
   div#trab {
-    height: /*270px*/ 15%;
-    width: 500px;
-    background-color: #000000a4;
+  width: 100%;
+    max-width: 1000px;
+    
     
   }
   div#aqui {
     background-color: #00000070;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     height: 135px;
     padding-top: -10px;
     margin-top: 30px;
@@ -547,11 +543,20 @@ p.sobre {
   }
   div.sou{
     background-color: #0000008a;
-    width: 610px;
+    width: 100%;
+    max-width: 800px;
     height: 230px;
     padding: 10px;
     justify-content: left;
   }
+  @media (max-width: 768px) {
+    div#trab,
+    div#aqui,
+    div.sou {
+      width: 90%;
+    }
+  }
+  
   .container-flex {
     display: flex;
     align-items: center;
@@ -583,23 +588,26 @@ p.sobre {
   }
   
   form {
-    color: black;
-    background: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    max-width: 500px;
+    margin: 0px auto;
     padding: 20px;
+    background-color: #00000090;
     border-radius: 10px;
-    max-width: 400px;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
+    
   label {
     color: rgb(255, 255, 255);
     display: block;
-    margin-top: 15px;
+    margin-top: 5px;
   }
   input, select, textarea {
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
+    margin-top: 0px;
     border-radius: 5px;
     border: 1px solid #ccc;
     color: black;
@@ -613,12 +621,31 @@ p.sobre {
     padding: 10px;
     width: 100%;
     background: black;
-    color: rgb(190, 28, 211);
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
   }
+  #botao-ideia {
+    animation: pulsar 1.5s infinite;
+  }
+  
+  @keyframes pulsar {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255, 0, 0, 1);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+    }
+  }
+  
   .ideia {
     color: black;
   }
